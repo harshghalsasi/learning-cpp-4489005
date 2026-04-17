@@ -29,4 +29,4 @@ std::cout << "c = " << c;
 
 // Use of #define(Macros) is discouraged sometimes as there is no context and compiler doesn't enforce data type, syntax correctness. So instead, CONST is used
 
-// Macros have no scope, so even if defined inside main(), it doesn't become local. Compiler also doesn't enforce syntax, data type in declaration of Macros 
+// Macros have no scope, so even if defined inside main(), it doesn't become local. Compiler also doesn't enforce syntax, data type in declaration of Macros , use of Macros to define constants may lead to syntax errors

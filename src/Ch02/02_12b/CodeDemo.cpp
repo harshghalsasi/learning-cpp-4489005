@@ -5,7 +5,7 @@
 #include <iostream>
 #include <cstdint>
 
-enum class item_purpose {worship, dairy, wash, pet};     // enum in c++ is a strongly-typed class, meaning enum definition is scope-dependent (encapsulated within a class scope)
+enum class item_purpose {worship, dairy, wash, pet};     // enum in c++ is a strongly-typed class, meaning enum definition is scope-dependent (encapsulated within a class scope and enum values are not globally accessible or directly printable.)
 
 enum class item_kind {dairy, shop, garage}; //if declared as 'enum', compiler throws error for 'Dairy' ducplication. If declared as 'enum class', no error- Use of scope operator.
 
@@ -18,7 +18,7 @@ int main(){
     item_kind b = item_kind:: dairy;
  //   a = dairy;       // 'dairy' here refers to the index of dairy in globally defined item_purpose enum, when 'int dairy' is not defined above. thus will return 1
 
-    std::cout << "a = " << int(a) << std::endl;     //since a denotes index, typecasting is needed
+    std::cout << "a = " << int(a) << std::endl;     //explicit typecasting is needed since enum class doesn't allow printing element names but allows only their index. Also to print index, a is of enum class type, so need to explicitely convert to int
     std::cout << "b = " << int(b) << std::endl;
 
     std::cout << std::endl << std::endl;

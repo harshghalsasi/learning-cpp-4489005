@@ -1,6 +1,6 @@
 #include "cow.h"
 
-cow::cow(std::string name_i, int age_i, cow_purpose purpose_i){
+cow::cow(std::string name_i, int age_i, cow_purpose purpose_i){    // :: operator is used here to access functions/ data of the cow.h included file. since we have separated .h file containing delcarations and .cpp having definitions, .cpp needs to use :: to access .h contents
     name = name_i;
     age = age_i;
     purpose = purpose_i;

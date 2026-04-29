@@ -6,15 +6,20 @@
 #include "records.h"
 
 int main(){
-    Student my_student(1, "Hilda Jones");
-    Course my_course(7, "Physics 101", 4);
-    Grade my_grade(1, 7, 'B');
+    Student First(01, "Arb");
+    Student Second(02, "Rarb");
+    Student Third(03, "Warb");
 
-    std::cout << "Student: " << my_student.get_name() << std::endl;
-    std::cout << "Course: " << my_course.get_name() << std::endl;
-    std::cout << "Credits: " << my_course.get_credits() << std::endl;
-    std::cout << "Grade: " << my_grade.get_grade() << std::endl;
-    
+    Course Basic_Maths(101, "Basic Maths", 30);
+    Course Algebra(201, "Algebra", 20);
+    Course Geometry(301, "Geometry", 10);
+
+    Grade Top(01, 101, 'A');
+    Grade Medium(01, 101, 'B');
+    Grade Bottom(01, 101, 'C');
+
+    std::cout << "Student named " << First.get_name() << " has grade " << Medium.get_grade() << " in course " << Geometry.get_name() << " with credits " << Geometry.get_credits() << std::endl;
+
     std::cout << std::endl << std::endl;
     return (0);
 }

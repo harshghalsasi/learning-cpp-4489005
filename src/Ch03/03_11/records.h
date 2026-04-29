@@ -3,38 +3,38 @@
 #include <string>
 
 class Student{
+public:
+    Student(int i_id, std::string i_name);      //constructor declaration
+    int get_id();
+    std::string get_name();
+
 private:
     int id;
     std::string name;
-
-public:
-    Student(int the_id, std::string the_name);
-    int get_id() const;
-    std::string get_name() const;
 };
 
 class Course{
+public:
+    Course(int i_id, std::string i_name, int i_credits);
+    int get_id();
+    std::string get_name();
+    int get_credits();
+
 private:
     int id;
     std::string name;
-    unsigned char credits;
-
-public:
-    Course(int the_id, std::string the_name, unsigned char the_credits);
-    int get_id() const;
-    std::string get_name() const;
-    int get_credits() const;
+    int credits;
 };
 
 class Grade{
+public:
+    Grade(int i_id, int i_course_id, char i_grade);
+    int get_id();
+    int get_course_id();
+    char get_grade();
+
 private:
-    int student_id;
+    int id;
     int course_id;
     char grade;
-
-public:
-    Grade(int sid, int cid, char grd);
-    int get_student_id() const;
-    int get_course_id() const;
-    char get_grade() const;
 };
